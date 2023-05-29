@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeZoneConverterAPI", "TimeZoneConverterAPI.csproj", "{099A1745-C2C2-4701-8015-E6AB8CEC91D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeZoneConverterAPITests", "..\TimeZoneConverterAPITests\TimeZoneConverterAPITests.csproj", "{208A70D2-E1A9-462E-A243-1F11EE849360}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{099A1745-C2C2-4701-8015-E6AB8CEC91D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{099A1745-C2C2-4701-8015-E6AB8CEC91D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{099A1745-C2C2-4701-8015-E6AB8CEC91D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{208A70D2-E1A9-462E-A243-1F11EE849360}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{208A70D2-E1A9-462E-A243-1F11EE849360}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{208A70D2-E1A9-462E-A243-1F11EE849360}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{208A70D2-E1A9-462E-A243-1F11EE849360}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
