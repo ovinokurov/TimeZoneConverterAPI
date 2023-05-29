@@ -10,9 +10,9 @@ namespace TimeZoneConverterAPI.Controllers
     {
         private readonly TimeConversionService _timeConversionService;
 
-        public TimeController()
+        public TimeController(TimeConversionService timeConversionService)
         {
-            _timeConversionService = new TimeConversionService();
+            _timeConversionService = timeConversionService;
         }
 
         [HttpGet]
