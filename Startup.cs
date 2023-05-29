@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using TimeZoneConverterAPI.Interfaces;
 using TimeZoneConverterAPI.Services;
 
 namespace TimeZoneConverterAPI
@@ -29,7 +30,7 @@ namespace TimeZoneConverterAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddScoped<TimeConversionService>();
+            services.AddScoped<ITimeConversionService, TimeConversionService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Time Zone Converter API", Version = "v1" });

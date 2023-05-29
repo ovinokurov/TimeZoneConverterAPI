@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Rewrite.Internal;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
+using TimeZoneConverterAPI.Interfaces;
 using TimeZoneConverterAPI.Services;
 
 namespace TimeZoneConverterAPI.Controllers
@@ -10,9 +9,9 @@ namespace TimeZoneConverterAPI.Controllers
     [ApiController]
     public class TimeController : ControllerBase
     {
-        private readonly TimeConversionService _timeConversionService;
+        private readonly ITimeConversionService _timeConversionService;
 
-        public TimeController(TimeConversionService timeConversionService)
+        public TimeController(ITimeConversionService timeConversionService)
         {
             _timeConversionService = timeConversionService;
         }
@@ -32,15 +31,13 @@ namespace TimeZoneConverterAPI.Controllers
         /// </remarks>
         /// <param name="timeZone">The Windows time zone identifier as a string.</param>
         /// <returns>A string representing the current date and time in the specified time zone.</returns>
-
-
-
         [HttpGet]
         public ActionResult<string> Get(string timeZone)
         {
             try
             {
-                DateTime localDateTime = _timeConversionService.ConvertUtcToTimeZone(timeZone);
+                DateTime localDateTime = DateTime.Parse(_timeConversionService.ConvertUtcToTimeZone(timeZone));
+
                 return localDateTime.ToString();
             }
             catch (TimeZoneNotFoundException)

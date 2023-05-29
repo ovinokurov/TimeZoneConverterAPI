@@ -1,13 +1,20 @@
 ﻿using System;
+using TimeZoneConverterAPI.Interfaces;
 
 namespace TimeZoneConverterAPI.Services
 {
-    public class TimeConversionService
+    public class TimeConversionService : ITimeConversionService
     {
-        public DateTime ConvertUtcToTimeZone(string timeZone)
+        public string ConvertUtcToTimeZone(string timeZone)
         {
-            TimeZoneInfo tzi = TimeZoneInfo.FindSystemTimeZoneById(timeZone);
-            return TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, tzi);
+            // Implementation logic goes here
+            // Convert the UTC time to the specified time zone and return the result
+
+            // Example implementation using TimeZoneConverter library
+            var utcTime = DateTime.UtcNow;
+            var convertedTime = TimeZoneInfo.ConvertTimeFromUtc(utcTime, TimeZoneInfo.FindSystemTimeZoneById(timeZone));
+
+            return convertedTime.ToString();
         }
     }
 }
