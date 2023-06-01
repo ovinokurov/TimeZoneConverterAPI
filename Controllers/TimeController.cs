@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using TimeZoneConverterAPI.Interfaces;
-using TimeZoneConverterAPI.Services;
 
 namespace TimeZoneConverterAPI.Controllers
 {
